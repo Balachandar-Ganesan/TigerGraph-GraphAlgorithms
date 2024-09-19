@@ -4,3 +4,5 @@ g.V().hasLabel("person").valueMap("name", "age")
 g.V().hasLabel("person").values("name").dedup()
 g.V().has("person", "age", 29).valueMap("name", "age")
 g.V().has("person", "age", neq(29)).valueMap("name", "age")
+ g.V().has("person", "age", between(30f, 40f)).
+               valueMap("name", "age")
