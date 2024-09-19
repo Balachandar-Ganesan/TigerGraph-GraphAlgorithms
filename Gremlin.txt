@@ -1,0 +1,6 @@
+g.V().hasLabel("person").values("name")
+g.V().hasLabel("software").values("name")
+g.V().hasLabel("person").valueMap("name", "age")
+g.V().hasLabel("person").values("name").dedup()
+g.V().has("person", "age", 29).valueMap("name", "age")
+g.V().has("person", "age", neq(29)).valueMap("name", "age")
